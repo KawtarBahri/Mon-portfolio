@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kawtar Bahri - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Kawtar Bahri
+          <div class="contact_info">
+            <br>
+            kawtar.bahri@centrale-med.fr
+        </div>
+        <div style="clear:both;"></div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Compétences</a>
+          <a class="topmenu" href="#projects">Projets</a>
+          <a class="topmenu" href="#recommendations">Recommandations</a>          
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/601014116770475.6068beff4640a.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>Bienvenu dans le portfolio de Kawtar !</h1>
+          <p>
+            Je suis une élève ingénieure centralienne, dotée d'une solide expertise en apprentissage automatique et en analyse statistique. <br>Au cours des trois dernières années, j'ai mis en œuvre mes compétences pour extraire des insights précieux à partir de jeux de données complexes, contribuant ainsi à orienter les décisions des organisations vers une approche plus axée sur les données. Ma maîtrise s'étend à la conception et à la mise en place de modèles prédictifs, tout en exploitant des outils de pointe, tels que ceux énumérés ci-dessous.
+
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Compétences</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"/>
+          <h6>Python</h6>
+          <p>4 années d'expérience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"/>
+          <h6>SQL</h6>
+          <p>3 années d'expérience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Microsoft_Office_Excel_%282013%E2%80%932019%29.svg"/>
+          <h6>Excel</h6>
+          <p>3 années d'expérience</p>
+        </div> 
+
+        <div class="skill">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"/>
+          <h6>HTML</h6>
+          <p>1 année d'expérience</p>
+        </div> 
+
+        <div class="skill">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"/>
+          <h6>CSS</h6>
+          <p>1 année d'expérience</p>
+        </div>        
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projets
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>Application de l’IA dans l’industrie 4.0 — Prédiction de la consommation de l’énergie</h3>
+            <ul>
+              <li>Dans le cadre de ce projet, j’ai entrepris une analyse approfondie de la base de données d'une entreprise sidérurgique. L'objectif principal était d'identifier les tendances de consommation d'énergie, afin de mettre en place des solutions prédictives. En utilisant des frameworks de Machine Learning tels que Pandas, Scikit, XGBoost et TensorFlow, j’ai conçu des modèles capables d'anticiper la consommation d'énergie dans le secteur sidérurgique. Une évaluation minutieuse des performances de ces modèles a été réalisée, reposant sur des mesures précises. Cette analyse approfondie a permis de déterminer l'efficacité et la précision de nos modèles, contribuant ainsi à optimiser la gestion énergétique au sein de l'entreprise
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Analyse Comportementale et la Conduite du Changement chez Société Générale Maroc</h3>
+            <ul>
+              <li>Les principales réalisations incluent une analyse approfondie des comportements, la conception d'un prototype pour la collecte et le traitement de données afin de classifier les profils des collaborateurs, le développement de plans d’action spécifiques basés sur ces profils pour faciliter une conduite du changement efficace, et la création de guides d'utilisation détaillés pour garantir une adoption fluide de la solution. Ce projet a été un catalyseur significatif dans l'amélioration de l'implication des collaborateurs et le renforcement des initiatives stratégiques au sein de l'entreprise.</li>
+            </ul>
+          </div>
+          <hr>
+          
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+<!-- Recommendations -->
+<section id="recommendations">
+  <h2>Recommandations</h2>
+  <div style="clear:both;"></div>
+  <div class="all_recommendations" id="all_recommendations">
+    <!-- Les recommandations seront ajoutées ici dynamiquement -->
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetchRecommandations();
+  });
+</script>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Écrire une recommandation</legend>          
+          <input type="text" placeholder="Nom "> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Envoyer</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->        
+      </a>
+    </div>
+
+    <div class="iconbutton">
+      <a href="#" onclick="scrollToTop()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Up_arrow_white.svg">
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <!--<img src="html_finalprojimages/checkmark--outline.svg"/>-->      
+      <h3>Merci pour votre recommandation !</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
